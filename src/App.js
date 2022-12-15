@@ -9,7 +9,7 @@ const App = () => {
 		const getYears = () => {
 			const l = years.length
 			const boolYears = []
-			
+
 			for (let i = 0; i < l; i++)
 				boolYears.push(false)
 
@@ -26,8 +26,10 @@ const App = () => {
 					<h1 className='py-10 text-gray-300 text-center md:text-left text-5xl md:text-6xl font-medium'> Solar Labs Assignment </h1>
 				</header>
 
+				{/* Card with year checkbox */}
 				<PrimaryCard years={years} changeCheckYear={setCheckYear} />
 				
+				{/* Year cards */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> 
 					{
 						years?.map((year, idx) => <YearCard key={idx} visiblity={checkYear[idx]} value={year}  />)

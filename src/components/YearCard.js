@@ -95,7 +95,7 @@ const YearCard = ({visiblity, value}) => {
         <div className={`${visiblity? 'visible' : 'invisible'} p-6 mb-6 flex flex-col gap-6 bg-gray-100 border-1 border-white rounded-lg shadow-md`}>
             <div className='flex justify-between items-center'>
                 <h2 className="font-semibold text-4xl text-gray-300"> {value} </h2>
-                
+                {/* Reset Button */}
                 <div 
                     className='p-2 rounded-full text-xl text-white bg-gray-300 hover:bg-gray-400 shadow-lg shadow-gray-400 hover:shadow-gray-500'
                     onClick={clearValues}    
@@ -117,6 +117,7 @@ const YearCard = ({visiblity, value}) => {
                 </select>
             </div>
 
+            {/* Input field for months */}
             <InputField 
                 selectOption={selectOption} 
                 month={selectOption !== ''? months[selectOption][0] : ''} 
@@ -161,6 +162,7 @@ const YearCard = ({visiblity, value}) => {
                 hideInput={hideInput[parseInt(selectOption) * 4 + 3]}
             />
 
+            {/* Calculate Button */}
             <button 
                 className={`${selectOption !== '' && visiblity? 'visible' : 'invisible'} bg-gray-400 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg`}
                 onClick={calculate}    
